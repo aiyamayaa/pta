@@ -86,7 +86,11 @@ func TestBool(t *testing.T) {
 }
 
 func TestString(t *testing.T) {
-
+	ages := make(map[int]int)
+	ages[1] = 1
+	ages[2] = 2
+	val := ages[3]
+	fmt.Printf("%+T", val)
 }
 
 func TestConst(t *testing.T) {
