@@ -44,3 +44,18 @@ func findMin(nums []int) int {
 	}
 	return nums[l]
 }
+
+//leetcode官方解答-返回的值是正确的，但是下标有问题
+func findMin3(nums []int) int {
+	lens := len(nums)
+	left, right := 0, lens-1
+	for left < right { //需要mid与右边的邻居比较才能判断mid是否满足条件，使用模板2
+		mid := left + (right-left)/2
+		if nums[mid] < nums[right] { //右边有序，则mid已经是右边min,向左下坡
+			right = mid
+		} else { //向右下坡
+			left = mid + 1
+		}
+	}
+	return nums[left] // 此时left与right重合
+}
