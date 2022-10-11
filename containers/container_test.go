@@ -2,7 +2,7 @@ package containers
 
 import (
 	"fmt"
-	"github.com/aiyamayaa/pta/utils"
+	"github.com/aiyamayaa/pta/utils/sortutil"
 	"strings"
 	"testing"
 )
@@ -40,9 +40,9 @@ func (container ContainerTest) String() string {
 
 func TestGetSortedValuesInts(t *testing.T) {
 	container := ContainerTest{}
-	GetSortedValues(container, utils.IntComparator)
+	GetSortedValues(container, sortutil.IntComparator)
 	container.values = []interface{}{5, 1, 3, 2, 4}
-	values := GetSortedValues(container, utils.IntComparator)
+	values := GetSortedValues(container, sortutil.IntComparator)
 	for i := 1; i < container.Size(); i++ {
 		if values[i-1].(int) > values[i].(int) {
 			t.Errorf("Not sorted!")
@@ -52,9 +52,9 @@ func TestGetSortedValuesInts(t *testing.T) {
 
 func TestGetSortedValuesStrings(t *testing.T) {
 	container := ContainerTest{}
-	GetSortedValues(container, utils.StringComparator)
+	GetSortedValues(container, sortutil.StringComparator)
 	container.values = []interface{}{"g", "a", "d", "e", "f", "c", "b"}
-	values := GetSortedValues(container, utils.StringComparator)
+	values := GetSortedValues(container, sortutil.StringComparator)
 	for i := 1; i < container.Size(); i++ {
 		if values[i-1].(string) > values[i].(string) {
 			t.Errorf("Not sorted!")

@@ -1,4 +1,4 @@
-package utils
+package sortutil
 
 import (
 	"testing"
