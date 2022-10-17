@@ -29,7 +29,9 @@
 
 ###数组
 - 0035.Search-Insert-Position
+- 0048.Rotate-Image
 - 0056.Merge-Intervals
+- 0498.Diagonal-Traverse
 - 0724.Find-Pivot-Index
 
 
