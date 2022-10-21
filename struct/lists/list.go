@@ -1,4 +1,4 @@
-package list
+package lists
 
 import (
 	"github.com/aiyamayaa/pta/containers"

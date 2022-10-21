@@ -1,4 +1,4 @@
-package list
+package lists
 
 type Node struct {
 	Value int
