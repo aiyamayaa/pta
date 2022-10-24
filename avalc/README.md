@@ -45,5 +45,9 @@
 
 
 ###链表
+- 0019.Remove-Nth-Node-From-End-of-List
+- 0024.Swap-Nodes-in-Pairs
 - 0203.Remove-Linked-List-Elements
+- 0206.Reverse-Linked-List
 - 0707.Design-Linked-List
+- 
